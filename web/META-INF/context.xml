@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/CS425Project2">
-    
+<Context path="/CS425Project2">   
     <Resource
-        
         auth="Container"
         autoReconnect="true"
         driverClassName="com.mysql.jdbc.Driver"
@@ -22,12 +20,9 @@
         useSSL="false"
         username="p2_auth"
         validationQuery="SELECT 1"
-        validationQueryTimeout="-1"
-        
+        validationQueryTimeout="-1"        
     />
-    
     <Resource
-        
         auth="Container"
         autoReconnect="true"
         driverClassName="com.mysql.jdbc.Driver"
@@ -47,12 +42,9 @@
         useSSL="false"
         username="p2_user"
         validationQuery="SELECT 1"
-        validationQueryTimeout="-1"
-        
-    />
-    
-    <Realm
-        
+        validationQueryTimeout="-1"     
+    />    
+    <Realm      
         className="org.apache.catalina.realm.DataSourceRealm"
         dataSourceName="jdbc/auth"
         localDataSource="true"
@@ -61,9 +53,6 @@
         userNameCol="username"
         userRoleTable="user_to_role"
         userTable="login" >
-        
-        <CredentialHandler algorithm="md5" className="org.apache.catalina.realm.MessageDigestCredentialHandler"/>
-        
-    </Realm>
-    
+        <CredentialHandler algorithm="md5" className="org.apache.catalina.realm.MessageDigestCredentialHandler"/> 
+    </Realm>  
 </Context>
